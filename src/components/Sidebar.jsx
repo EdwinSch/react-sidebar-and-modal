@@ -6,7 +6,7 @@ const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
-    <aside className="sidebar">
+    <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
       <div className="sidebar-header">
         <h4>COMPANY</h4>
         <button className="close-btn" onClick={closeSidebar} type="button">
@@ -28,12 +28,14 @@ const Sidebar = () => {
         })}
       </ul>
       {/* social links */}
-      <ul className="social-links">
+      <ul className="social-icons">
         {social.map((link) => {
           const { id, url, icon } = link;
           return (
             <li key={id}>
-              <a href={url}>{icon}</a>
+              <a href={url} target="blank">
+                {icon}
+              </a>
             </li>
           );
         })}
