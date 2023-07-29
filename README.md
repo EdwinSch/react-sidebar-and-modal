@@ -8,3 +8,11 @@ A small React project with a dynamic sidebar (aside) and modal (center overlay),
 - CSS
 - Vite
 - React Icons
+
+#### 💻 Run this project
+
+```
+git clone [repo]
+npm install
+npm run dev
+```
